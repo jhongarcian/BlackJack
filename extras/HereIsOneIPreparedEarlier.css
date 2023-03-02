@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: inherit;
+}
+.score-container {
+  margin: 20px;
+}
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.message-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 2;
+  font-size: 24px;
+  color: #fff;
+}
+.deck-count {
+  position: relative;
+  height: 120px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 20px solid rgb(10, 43, 2);
+  background: url("https://t4.ftcdn.net/jpg/01/33/44/05/360_F_133440580_hqd9ehq2DxFj7rTl11ee3Gd6CwRmdjrB.jpg");
+  color: white;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 20px;
+  margin: 20px;
+}
+.player:nth-child(2){
+  flex-direction: column-reverse;
+}
+
+
+.player-name {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #31bb3e;
+}
+
+.points {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-weight:bold;
+  font-size: 18px;
+  background: rgba(10, 43, 2, 0.677);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.hand {
+  display: flex;
+  gap: 10px;
+}
+
+.hand img,
+.deck-count img {
+  height: 120px;
+  width: auto;
+
+}
+.deck-count img {
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  padding: 5px;
+}
+
+.deck-count-display {
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button {
+  margin: 10px;
+  font-size: 18px;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: rgb(189, 229, 255);
+  background: rgb(0, 98, 163);
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgb(35, 133, 199);
+  box-shadow: 0px 0px 10px 5px rgba(35, 133, 199, 0.55);
+}
+
+button[disabled] {
+  color: rgb(160, 160, 160);
+  background: rgb(71, 71, 71);
+}
+
+button[disabled]:hover {
+  cursor: not-allowed;
+  background: rgb(71, 71, 71);
+  box-shadow: none;
+}
+
+button[type="reset"] {
+  color: rgb(255, 184, 184);
+  background: rgb(133, 8, 8);
+}
+
+button[type="reset"]:hover {
+  background: rgb(150, 7, 7);
+  box-shadow: 0px 0px 10px 5px rgba(150, 7, 7, 0.63);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
